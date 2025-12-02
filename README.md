@@ -6,7 +6,7 @@ The system automatically fetches historical NIFTY-50 market data from Yahoo Fina
 The goal of this project is to help users understand short-term market trends and experiment with time-series forecasting using modern deep-learning techniques.
 
 **📌 Features
-1. Automatic Data Fetching**
+**1. Automatic Data Fetching****
 
 Retrieves 25 years of official NIFTY-50 (India) historical data
 
@@ -23,8 +23,8 @@ Trained on normalized closing prices
 Builds automated sliding-window sequences (60-day lookback)
 
 Produces a prediction for the next trading day
-**
-3. User Interface (UI)**
+
+**3. User Interface (UI)**
 
 Built using Tkinter, simple and lightweight
 
@@ -42,7 +42,7 @@ Predicted Next Date
 
 Predicted Next-Day Closing Price
 
-4. Background Non-Blocking Execution
+**4. Background Non-Blocking Execution**
 
 Uses Python threading to ensure the UI does not freeze
 
@@ -51,40 +51,39 @@ Good for slow CPUs or long training cycles
 🧠 System Architecture
 +--------------------------+
 |   Yahoo Finance (API)    |
-
 +------------+-------------+
              |
              v
+             
 +--------------------------+
 |   Data Preprocessing     |
 | - Missing value cleaning |
 | - Normalization (MinMax) |
 | - Sliding window (60)    |
-
 +------------+-------------+
              |
              v
+             
 +--------------------------+
 |      LSTM Model          |
 | - 64-unit LSTM           |
 | - 32-unit LSTM           |
 | - Dense prediction layer |
-
 +------------+-------------+
              |
              v
+             
 +--------------------------+
 |  Next-Day Price Output   |
-
 +------------+-------------+
              |
              v
+             
 +------------------------------+
 |    Desktop UI (Tkinter)      |
 | • Predict button              |
 | • Auto-train + Predict       |
 | • Date + price summary       |
-
 +------------------------------+
 
 🛠 Technologies Used
