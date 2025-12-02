@@ -49,42 +49,25 @@ Uses Python threading to ensure the UI does not freeze
 Good for slow CPUs or long training cycles
 
 🧠 System Architecture
-+--------------------------+
-|   Yahoo Finance (API)    |
-+------------+-------------+
-             |
-             v
-             
-+--------------------------+
-|   Data Preprocessing     |
-| - Missing value cleaning |
-| - Normalization (MinMax) |
-| - Sliding window (60)    |
-+------------+-------------+
-             |
-             v
-             
-+--------------------------+
-|      LSTM Model          |
-| - 64-unit LSTM           |
-| - 32-unit LSTM           |
-| - Dense prediction layer |
-+------------+-------------+
-             |
-             v
-             
-+--------------------------+
-|  Next-Day Price Output   |
-+------------+-------------+
-             |
-             v
-             
-+------------------------------+
-|    Desktop UI (Tkinter)      |
-| • Predict button              |
-| • Auto-train + Predict       |
-| • Date + price summary       |
-+------------------------------+
+Yahoo Finance (API)
+        ↓
+Data Preprocessing
+    - Clean missing values
+    - Normalize data (MinMax)
+    - Create 60-day sliding window
+        ↓
+LSTM Model
+    - 64-unit LSTM layer
+    - 32-unit LSTM layer
+    - Dense output layer
+        ↓
+Next-Day Price Prediction
+        ↓
+Desktop UI (Tkinter)
+    - Predict button
+    - Runs model
+    - Shows current price & predicted price
+
 
 🛠 Technologies Used
 Languages
