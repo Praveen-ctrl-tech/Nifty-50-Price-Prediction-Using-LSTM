@@ -1,12 +1,12 @@
-📈 NIFTY-50 Next-Day Price Prediction (LSTM + UI)
+**📈 NIFTY-50 Next-Day Price Prediction (LSTM + UI)**
 
 This project implements a Next-Day Stock Price Prediction System for NIFTY-50 using a Long Short-Term Memory (LSTM) deep-learning model.
 The system automatically fetches historical NIFTY-50 market data from Yahoo Finance, trains an LSTM model, predicts the next day’s closing price, and displays the results in a simple user interface (UI).
 
 The goal of this project is to help users understand short-term market trends and experiment with time-series forecasting using modern deep-learning techniques.
 
-📌 Features
-1. Automatic Data Fetching
+**📌 Features
+1. Automatic Data Fetching**
 
 Retrieves 25 years of official NIFTY-50 (India) historical data
 
@@ -14,7 +14,7 @@ Uses Yahoo Finance API via yfinance
 
 Includes OHLCV (Open, High, Low, Close, Volume) data
 
-2. Deep Learning Model – LSTM
+**2. Deep Learning Model – LSTM**
 
 Uses a multi-layer LSTM network with dropout
 
@@ -23,8 +23,8 @@ Trained on normalized closing prices
 Builds automated sliding-window sequences (60-day lookback)
 
 Produces a prediction for the next trading day
-
-3. User Interface (UI)
+**
+3. User Interface (UI)**
 
 Built using Tkinter, simple and lightweight
 
@@ -51,6 +51,7 @@ Good for slow CPUs or long training cycles
 🧠 System Architecture
 +--------------------------+
 |   Yahoo Finance (API)    |
+
 +------------+-------------+
              |
              v
@@ -59,6 +60,7 @@ Good for slow CPUs or long training cycles
 | - Missing value cleaning |
 | - Normalization (MinMax) |
 | - Sliding window (60)    |
+
 +------------+-------------+
              |
              v
@@ -67,11 +69,13 @@ Good for slow CPUs or long training cycles
 | - 64-unit LSTM           |
 | - 32-unit LSTM           |
 | - Dense prediction layer |
+
 +------------+-------------+
              |
              v
 +--------------------------+
 |  Next-Day Price Output   |
+
 +------------+-------------+
              |
              v
@@ -80,6 +84,7 @@ Good for slow CPUs or long training cycles
 | • Predict button              |
 | • Auto-train + Predict       |
 | • Date + price summary       |
+
 +------------------------------+
 
 🛠 Technologies Used
